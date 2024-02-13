@@ -13,6 +13,7 @@ class BaseTest(unittest.TestCase):
         options.add_argument("disable-popup-blocking")
         options.add_argument("disable-extensions")
         options.add_argument("use_subprocess")
+        options.add_argument("headless")
         self.driver = webdriver.Chrome(options=options)
         self.driver.get(self.base_url)
         self.driver.implicitly_wait(10)
